@@ -1,0 +1,19 @@
+<div class="container">
+    Rough work
+    <div class="row">
+        <div class="col-xs-12">
+            <ol>
+                <li>Add an input filed that updates a property - username via 2-way binding.</li>
+                <li>Output the username via string interpolation.</li>
+                <li>Add a button that may only be clicked if username is not empty.</li>
+                <li>upon clicking the button, the username should be reset to an empty string.</li>
+            </ol>
+            <input type="text" class="form-control" [(ngModel)]="username"/>
+            <button class="btn btn-primary btn-success" 
+                    [disabled]="!validUser()"
+                    (click)="resetUsername()">
+                Hello {{getUsername()}}
+            </button>
+        </div>
+    </div>
+</div>
